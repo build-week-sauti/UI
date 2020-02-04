@@ -16,3 +16,17 @@
     line-height: 1.75;
     letter-spacing: 0.02857rem;
 }
+
+.bounce(){
+    position: relative;
+    top: -.5rem;
+    animation-name: @bounceName;
+    animation-duration: .1s;
+}
+
+.bounceKeyframes() {
+    @keyframes @bounceName {
+        from {top: 0}
+        to {top: -.5rem}
+    }
+}

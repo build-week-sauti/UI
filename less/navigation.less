@@ -4,9 +4,33 @@ header {
     box-shadow: @nav-boxshadow;
 
     nav{
-        .flex(row, space-between, flex-end);
+        .flex(row, flex-start, flex-end);
         min-height: 64px;
         font-size: 1.5rem;
+
+        @media @phone {
+            .flex(column, center, center);
+        }
+
+        .logo-text {
+            width: 15.5rem;
+            font-size: 2.5rem;
+            padding: 2rem 0;
+
+            @media @phone {
+                width: 100%;
+            }
+
+            a {
+                text-transform: unset;
+                border: none;
+                color: white;
+
+                &:hover {
+                    border: none;
+                }
+            }
+        }
 
         a {
             text-decoration: none;
@@ -16,21 +40,11 @@ header {
         }
 
         .nav-links {
-            .flex(row, flex-start, flex-end);
-            width: 20%;
+            .flex(row, space-between, flex-end);
+            width: 80%;
 
-            h5 {
-                font-size: 2.5rem;
-                padding: 2rem 0;
-
-                a {
-                    text-transform: unset;
-                    border: none;
-
-                    &:hover {
-                        border: none;
-                    }
-                }
+            @media @phone {
+                width: 100%;
             }
             
             a {
@@ -51,7 +65,8 @@ header {
         }
 
         .profile {
-            .flex(row, center, flex-end);
+            justify-self: flex-end;
+            align-self: flex-end;
             a {
                 text-transform: uppercase;
                 padding: 2rem 1.2rem;
