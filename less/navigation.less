@@ -3,19 +3,32 @@ header {
     padding: 0 24px;
     box-shadow: @nav-boxshadow;
 
+    @media @phone {
+        padding: 0;
+    }
+
     nav{
         .flex(row, flex-start, flex-end);
         min-height: 64px;
         font-size: 1.5rem;
 
+        @media @tablet {
+            .flex(column, center, center);
+        }
+
         @media @phone {
             .flex(column, center, center);
+            text-align: center;
         }
 
         .logo-text {
             width: 15.5rem;
             font-size: 2.5rem;
             padding: 2rem 0;
+
+            @media @tablet {
+                width: 100%;
+            }
 
             @media @phone {
                 width: 100%;
@@ -25,6 +38,10 @@ header {
                 text-transform: unset;
                 border: none;
                 color: white;
+
+                @media @phone {
+                    width: 100%;
+                }
 
                 &:hover {
                     border: none;
@@ -41,9 +58,14 @@ header {
 
         .nav-links {
             .flex(row, space-between, flex-end);
-            width: 80%;
+            width: 95%;
+
+            @media @tablet {
+                width: 100%;
+            }
 
             @media @phone {
+                .flex(column, center, center);
                 width: 100%;
             }
             
@@ -52,28 +74,28 @@ header {
                 padding: 2rem 1.2rem;
                 text-transform: uppercase;
 
+                @media @phone {
+                    width: 100%;
+                    border-top: .1rem solid white;
+                }
+
                 &:hover {
                     border-bottom: .2rem solid white;
                     padding: 1.8rem 1.2rem;
+
+                    @media @phone {
+                        border-top: .1rem solid white;
+                        border-bottom: none;
+                    }
                 }
             }
 
             .selected {
                 border-bottom: 2px solid white;
                 padding: 1.8rem 1.2rem;
-            }
-        }
 
-        .profile {
-            justify-self: flex-end;
-            align-self: flex-end;
-            a {
-                text-transform: uppercase;
-                padding: 2rem 1.2rem;
-                
-                &:hover {
-                    border-bottom: 2px solid white;
-                    padding: 1.8rem 1.2rem;
+                @media @phone {
+                    border-bottom: inherit;
                 }
             }
         }
