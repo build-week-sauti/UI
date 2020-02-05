@@ -1,0 +1,32 @@
+.flex(@direction, @justify, @align){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.contactButton() {
+    background-color: @contact-btn-bgcolor;
+    color: @contact-btn-fontcolor;
+    border: 1px solid black;
+    border-radius: .4rem;
+    padding: .5rem 1.6rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.75;
+    letter-spacing: 0.02857rem;
+}
+
+.bounce(){
+    position: relative;
+    top: -.5rem;
+    animation-name: @bounceName;
+    animation-duration: .1s;
+}
+
+.bounceKeyframes() {
+    @keyframes @bounceName {
+        from {top: 0}
+        to {top: -.5rem}
+    }
+}
