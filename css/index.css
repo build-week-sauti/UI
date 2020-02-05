@@ -277,8 +277,6 @@ header nav .logo-text a:hover {
 }
 header nav a {
   text-decoration: none;
-  font-style: none;
-  color: #035985;
   font-family: 'Roboto', sans-serif;
 }
 header nav .nav-links {
@@ -322,6 +320,9 @@ header nav .nav-links a:hover {
     border-top: 0.1rem solid white;
     border-bottom: none;
   }
+}
+header nav .nav-links #profile-link {
+  color: white;
 }
 header nav .nav-links .selected {
   border-bottom: 2px solid white;
